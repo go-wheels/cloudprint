@@ -1,5 +1,7 @@
 github.com/davecgh/go-spew v1.1.0 h1:ZDRjVQ15GmhC3fiQ8ni8+OwkZQO4DARzQgrnXU1Liz8=
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
+github.com/go-wheels/tk v0.0.0-20220312063453-a59cb6f3fad8 h1:uIcV9oFD8xIj7ADvf6SYQsT7iS0Nq23H/ckUA0xcY4Q=
+github.com/go-wheels/tk v0.0.0-20220312063453-a59cb6f3fad8/go.mod h1:hB/nhUGWSQeXVX3Q9LEYfkBE8PJzphhKz1EcPi5yV7A=
 github.com/google/uuid v1.3.0 h1:t6JiXgmwXMjEs8VusXIJk2BXHsn+wx8BZdTaoZ5fu7I=
 github.com/google/uuid v1.3.0/go.mod h1:TIyPZe4MgqvfeYDBFedMoGGpEw/LqOeaOT+nhxU+yHo=
 github.com/jinzhu/inflection v1.0.0 h1:K317FqzuhWc8YvSVlFMCCUb36O/S9MCKRDI7QkRKD/E=

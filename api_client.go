@@ -6,12 +6,12 @@ import (
 	"encoding/json"
 	"fmt"
 	"io"
-	"math/rand"
 	"net/http"
 	"net/url"
 	"strconv"
 	"time"
 
+	"github.com/go-wheels/tk/randutil"
 	"github.com/google/uuid"
 	"github.com/tidwall/gjson"
 )
@@ -70,7 +70,7 @@ func (c *APIClient) Print(machineCode, content string) (apiResp *APIResponse, er
 	data.Set("access_token", token)
 	data.Set("machine_code", machineCode)
 	data.Set("content", content)
-	data.Set("origin_id", RandAlnumStr(32))
+	data.Set("origin_id", randutil.RandAlnumStr(32))
 
 	apiResp, err = c.PostForm(printURL, data)
 	return
@@ -164,21 +164,4 @@ func RequestID() string {
 
 func TimestampStr() string {
 	return strconv.FormatInt(time.Now().Unix(), 10)
-}
-
-var (
-	alnum       = `0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz`
-	defaultRand = rand.New(rand.NewSource(time.Now().UnixNano()))
-)
-
-func RandAlnumStr(n int) string {
-	return string(RandAlnum(n))
-}
-
-func RandAlnum(n int) []byte {
-	b := make([]byte, n)
-	for i := 0; i < n; i++ {
-		b[i] = alnum[defaultRand.Intn(len(alnum))]
-	}
-	return b
 }

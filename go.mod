@@ -3,6 +3,7 @@ module github.com/go-wheels/cloudprint
 go 1.17
 
 require (
+	github.com/go-wheels/tk v0.0.0-20220312063453-a59cb6f3fad8
 	github.com/google/uuid v1.3.0
 	github.com/joho/godotenv v1.4.0
 	github.com/tidwall/gjson v1.14.0
