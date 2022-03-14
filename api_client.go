@@ -76,7 +76,7 @@ func (c *APIClient) Print(machineCode, content string) (apiResp *APIResponse, er
 	return
 }
 
-func (c *APIClient) DeletePrinter(machineCode, msign string) (apiResp *APIResponse, err error) {
+func (c *APIClient) DeletePrinter(machineCode string) (apiResp *APIResponse, err error) {
 	token, err := c.tokenStore.Get(c.clientID)
 	if err != nil {
 		return
