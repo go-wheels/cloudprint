@@ -26,6 +26,12 @@ const (
 	getPrinterStatusURL = apiURL + "printer/getprintstatus"
 )
 
+const (
+	PrinterStatusOffline    = "0"
+	PrinterStatusOnline     = "1"
+	PrinterStatusOutofpaper = "2"
+)
+
 type APIResponse struct {
 	Error            string          `json:"error"`
 	ErrorDescription string          `json:"error_description"`
