@@ -40,9 +40,8 @@ func TestAPIClient_Authorize(t *testing.T) {
 
 func TestAPIClient_DeletePrinter(t *testing.T) {
 	machineCode := os.Getenv("MACHINE_CODE")
-	msign := os.Getenv("MSIGN")
 
-	_, err := apiClient.DeletePrinter(machineCode, msign)
+	_, err := apiClient.DeletePrinter(machineCode)
 	assert.NoError(t, err)
 }
 
